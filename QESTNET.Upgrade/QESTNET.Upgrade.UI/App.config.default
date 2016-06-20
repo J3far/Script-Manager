@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <startup useLegacyV2RuntimeActivationPolicy="true"> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0" />
+    </startup>
+
+    <appSettings>
+      <add key="manifestPath" value="./Scripts/database_upgrade.qn.manifest"/>
+
+      <!--
+        If you don't want to use a transaction scope when running scripts, you can explicitly disable it here.
+
+        The only time you should do this is when you are running a database upgrade where a single transaction
+        will take more than 10 minutes (or the maximum timeout value specified in your machine.config file), and
+        you cannot override the machine timeout (i.e. not running with 'full trust').
+      -->
+      <!-- <add key="disableTransactionScope" value="false" /> -->
+
+      <!--
+        You cannot normally specify a transaction timeout that is larger than the machine.config's maximum
+        timeout. In a FULL TRUST environment, we can attempt to work around it using reflection.
+        The default is 10 minutes.
+      -->
+      <!-- <add key="overrideMachineMaximumTransactionTimeout" value="0:10:00" /> -->
+
+    </appSettings>
+  
+    <connectionStrings>
+      <!--<add name="Example" connectionString="data source=ADLS0007\CUSTOMER2008R2;initial catalog=QESTLab_EXAMPLE;integrated security=True;multipleactiveresultsets=True;Asynchronous Processing=True;App=QestnetUpgrade"/>-->
+    </connectionStrings>
+  
+</configuration>
+
+
