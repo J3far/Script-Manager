@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Settings>
+	<Alias>
+		<currentDirectory>[cd]</currentDirectory>
+		<profile>[profile]</profile>
+		<downloadToDirectory>[dd]</downloadToDirectory>
+		<restoreToDirectory>[rd]</restoreToDirectory>
+		<awsSync>sync</awsSync>
+		<awsList>ls</awsList>
+		<awsCd>cd</awsCd>
+		<awsCopy>cp</awsCopy>
+	</Alias>
+	
+	<Default>
+		<downloadToDirectory>C:\databases\backups</downloadToDirectory>
+		<restoreToDirectory>C:\databases\backups</restoreToDirectory>
+		<awsDirectory>s3://sqa-database-backup/CBB_SQA-SQL01/CBB_Database/SQA-SQL01</awsDirectory>
+		<databaseName>QESTLab</databaseName>
+		<restoreScriptName>restore.sql</restoreScriptName>		
+	</Default>
+
+	<AWS>
+		<synCommand>aws s3 sync</synCommand>
+		<listCommand>aws s3 ls</listCommand>
+		<copyCommand>aws s3 cp</copyCommand>
+		<awsRootDirectory>s3://</awsRootDirectory>
+		<profile>--profile backup</profile>
+	</AWS>
+
+	<Commands>
+		<Item>
+			<Key>sync</Key>
+			<Value>aws s3 sync</Value>
+		</Item>
+		
+		<Item>
+			<Key>cp</Key>
+			<Value>aws s3 cp</Value>
+		</Item>
+		
+		<Item>
+			<Key>ls</Key>
+			<Value>aws s3 ls</Value>
+		</Item>		
+	</Commands>
