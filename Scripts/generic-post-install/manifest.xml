@@ -1,1 +1,7 @@
 //lets keep this one the same as the current manifest
+
+#1.48
+
+// Corrections
+generic-post-install/SQ08435_Update_PSDHasBeenOpened&CurrentSpecification_Fields.2_1.sql
+
