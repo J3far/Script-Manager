@@ -19,6 +19,8 @@
 -- Re-Run Requirement: Once. 
 ----------------------------------------------------------------------------------------------------------------------------
 
+-- Just some comments
+-- Just some comments 
 begin tran
 declare @whereClause nvarchar(max)
 declare @sql nvarchar(max)
